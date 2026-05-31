@@ -6,7 +6,8 @@ import {
   TextField, MenuItem, Alert, CircularProgress,
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Tooltip
 } from '@mui/material';
-import { Add, Edit, Delete, DirectionsTruck } from '@mui/icons-material';
+import { Add, Edit, Delete } from '@mui/icons-material';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import AppLayout from '@/components/layout/AppLayout';
 import StatusChip from '@/components/ui/StatusChip';
 import { vehiclesAPI } from '@/services/api';
@@ -59,7 +60,7 @@ export default function VehiclesPage() {
     <AppLayout>
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-          <DirectionsTruck sx={{ color: 'info.main', fontSize: 30 }} />
+          <LocalShippingIcon sx={{ color: 'info.main', fontSize: 30 }} />
           <Box>
             <Typography variant="h5">Vehicle Management</Typography>
             <Typography variant="body2" color="text.secondary">{vehicles.length} vehicles · {available} available</Typography>

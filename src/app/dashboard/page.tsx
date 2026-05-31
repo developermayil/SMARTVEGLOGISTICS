@@ -5,9 +5,11 @@ import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Skeleton
 } from '@mui/material';
 import {
-  Inventory2, People, DirectionsTruck, LocalShipping,
-  TrendingUp, Eco
+  Inventory2, People,  LocalShipping,
+  TrendingUp
 } from '@mui/icons-material';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import SpaIcon from '@mui/icons-material/Spa'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import AppLayout from '@/components/layout/AppLayout';
 import StatCard from '@/components/ui/StatCard';
@@ -33,7 +35,7 @@ export default function DashboardPage() {
     <AppLayout>
       {/* Header */}
       <Box sx={{ mb: 3, display: 'flex', alignItems: 'center', gap: 1.5 }}>
-        <Eco sx={{ color: 'primary.main', fontSize: 30 }} />
+        <SpaIcon sx={{ color: 'primary.main', fontSize: 30 }} />
         <Box>
           <Typography variant="h5">Dashboard</Typography>
           <Typography variant="body2" color="text.secondary">Smart Veg Logistics Overview</Typography>
@@ -63,7 +65,7 @@ export default function DashboardPage() {
             title="Fleet Size"
             value={loading ? '...' : stats?.vehicles?.total_vehicles || 0}
             subtitle={`${stats?.vehicles?.available || 0} available · ${stats?.vehicles?.in_transit || 0} in transit`}
-            icon={<DirectionsTruck />} color="#039BE5" loading={loading}
+            icon={<LocalShippingIcon />} color="#039BE5" loading={loading}
           />
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>

@@ -5,9 +5,11 @@ import {
   Typography, Divider, Avatar, Tooltip
 } from '@mui/material';
 import {
-  Dashboard, Inventory2, People, LocalShipping, DirectionsTruck,
-  Logout, Eco
+  Dashboard, Inventory2, People, LocalShipping,
+  Logout
 } from '@mui/icons-material';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import SpaIcon from '@mui/icons-material/Spa'
 import { useAuth } from '@/hooks/useAuth';
 
 const DRAWER_WIDTH = 240;
@@ -16,8 +18,8 @@ const navItems = [
   { label: 'Dashboard', icon: <Dashboard />, href: '/dashboard' },
   { label: 'Stock', icon: <Inventory2 />, href: '/stocks' },
   { label: 'Farmers', icon: <People />, href: '/farmers' },
-  { label: 'Vehicles', icon: <DirectionsTruck />, href: '/vehicles' },
-  { label: 'Deliveries', icon: <LocalShipping />, href: '/deliveries' },
+  { label: 'Vehicles', icon: <LocalShippingIcon />, href: '/vehicles' },
+  { label: 'Deliveries', icon: <LocalShippingIcon />, href: '/deliveries' },
 ];
 
 export default function Sidebar() {
@@ -39,7 +41,7 @@ export default function Sidebar() {
     }}>
       {/* Brand */}
       <Box sx={{ p: 2.5, display: 'flex', alignItems: 'center', gap: 1.5 }}>
-        <Eco sx={{ fontSize: 30, color: '#A5D6A7' }} />
+        <SpaIcon sx={{ fontSize: 30, color: '#A5D6A7' }} />
         <Box>
           <Typography variant="subtitle1" fontWeight={700} lineHeight={1.2}>Smart Veg</Typography>
           <Typography variant="caption" sx={{ color: '#A5D6A7' }}>Logistics</Typography>

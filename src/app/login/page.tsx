@@ -6,7 +6,8 @@ import {
   Box, Card, CardContent, TextField, Button, Typography,
   Alert, InputAdornment, IconButton, CircularProgress
 } from '@mui/material';
-import { Visibility, VisibilityOff, LocalShipping, Eco } from '@mui/icons-material';
+import { Visibility, VisibilityOff, LocalShipping } from '@mui/icons-material';
+import SpaIcon from '@mui/icons-material/Spa';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -42,7 +43,7 @@ export default function LoginPage() {
           {/* Logo */}
           <Box sx={{ textAlign: 'center', mb: 3 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, mb: 1 }}>
-              <Eco sx={{ color: 'primary.main', fontSize: 36 }} />
+              <SpaIcon sx={{ color: 'primary.main', fontSize: 36 }} />
               <LocalShipping sx={{ color: 'secondary.main', fontSize: 36 }} />
             </Box>
             <Typography variant="h5" fontWeight={700} color="primary.dark">Smart Veg Logistics</Typography>
