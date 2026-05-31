@@ -1,13 +1,13 @@
-import Header from "@/components/common/Header";
+'use client';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import Cookies from 'js-cookie';
 
-export default function HomePage() {
-  return (
-    <>
-      <Header />
-
-      <div style={{ padding: 20 }}>
-        <h1>Welcome to Smart Veg Logistics</h1>
-      </div>
-    </>
-  );
+export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    const token = Cookies.get('token');
+    router.replace(token ? '/dashboard' : '/login');
+  }, [router]);
+  return null;
 }
