@@ -11,11 +11,13 @@ import {
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import SpaIcon from '@mui/icons-material/Spa'
 import { useAuth } from '@/hooks/useAuth';
+import FactCheckIcon from '@mui/icons-material/FactCheck';
 
 const DRAWER_WIDTH = 240;
 
 const navItems = [
   { label: 'Dashboard', icon: <Dashboard />, href: '/dashboard' },
+    { label: 'Orders', icon: <FactCheckIcon />, href: '/orders' },
   { label: 'Stock', icon: <Inventory2 />, href: '/stocks' },
   { label: 'Farmers', icon: <People />, href: '/farmers' },
   { label: 'Vehicles', icon: <LocalShippingIcon />, href: '/vehicles' },
