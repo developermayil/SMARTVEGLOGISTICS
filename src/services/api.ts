@@ -74,4 +74,22 @@ export const deliveriesAPI = {
   delete: (id: number) => api.delete(`/deliveries/${id}`),
 };
 
+// Customers API
+export const customersAPI = {
+  getAll: () => api.get('/customers'),
+  getById: (id: string) => api.get(`/customers/${id}`),
+  create: (data: any) => api.post('/customers', data),
+  update: (id: string, data: any) => api.put(`/customers/${id}`, data),
+  delete: (id: string) => api.delete(`/customers/${id}`),
+};
+
+// Orders API
+export const ordersAPI = {
+  getAll: () => api.get('/orders'),
+  getById: (id: string) => api.get(`/orders/${id}`),
+  create: (data: any) => api.post('/orders', data),
+  update: (id: string, data: any) => api.put(`/orders/${id}`, data),
+  delete: (id: string) => api.delete(`/orders/${id}`),
+};
+
 export default api;
