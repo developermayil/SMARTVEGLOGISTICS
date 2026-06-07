@@ -69,7 +69,11 @@ export const vehiclesAPI = {
 export const deliveriesAPI = {
   getAll: () => api.get('/deliveries'),
   getById: (id: number) => api.get(`/deliveries/${id}`),
-  create: (data: any) => api.post('/deliveries', data),
+  create: (data: any) => api.post('/deliveries', {
+  ...data,
+  latitude: Number(data.latitude),
+  longitude: Number(data.longitude),
+}),
   updateStatus: (id: number, data: any) => api.patch(`/deliveries/${id}/status`, data),
   delete: (id: number) => api.delete(`/deliveries/${id}`),
 };
